@@ -1,17 +1,188 @@
 ---
-
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Receta de Omelette</title>
+  </head>
+  <body>
+    <main>
+      <img src="/assets/images/image-omelette.jpeg" alt="Omelette" />
+
+      <h1>Receta de Omelette</h1>
+      <p class="description">
+        Un plato fácil y rápido, perfecto para cualquier comida. Este omelette clásico combina huevos batidos cocinados a la perfección, opcionalmente rellenos con tu elección de queso, vegetales o carnes.
+      </p>
+
+      <section class="prep-time">
+        <h3>Tiempo de preparación</h3>
+        <ul>
+          <li><strong>Total:</strong> Aproximadamente 10 minutos</li>
+          <li><strong>Preparación:</strong> 5 minutos</li>
+          <li><strong>Cocción:</strong> 5 minutos</li>
+        </ul>
+      </section>
+
+      <section class="ingredients">
+        <h2>Ingredientes</h2>
+        <ul>
+          <li>2-3 huevos grandes</li>
+          <li>Sal al gusto</li>
+          <li>Pimienta al gusto</li>
+          <li>1 cucharada de mantequilla o aceite</li>
+          <li>Rellenos opcionales: queso, vegetales picados, carnes cocidas, hierbas</li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <section class="instructions">
+        <h2>Instrucciones</h2>
+        <ol>
+          <li><strong>Batir los huevos:</strong> En un bol, bate los huevos con una pizca de sal y pimienta hasta que estén bien mezclados.</li>
+          <li><strong>Calentar la sartén:</strong> Coloca una sartén antiadherente a fuego medio y añade mantequilla o aceite.</li>
+          <li><strong>Cocinar el omelette:</strong> Vierte los huevos. Inclina la sartén para asegurar que cubran uniformemente la superficie.</li>
+          <li><strong>Añadir rellenos:</strong> Cuando los huevos cuajen en los bordes, añade tus ingredientes favoritos.</li>
+          <li><strong>Doblar y servir:</strong> Dobla una mitad sobre la otra y deslízalo a un plato.</li>
+          <li><strong>¡Disfrutar!:</strong> Sirve caliente.</li>
+        </ol>
+      </section>
+
+      <hr />
+
+      <section class="nutrition">
+        <h2>Nutrición</h2>
+        <p>Valores nutricionales por porción (sin rellenos adicionales).</p>
+        <table>
+          <tr><td>Calorías</td><td class="value">277kcal</td></tr>
+          <tr><td>Carbohidratos</td><td class="value">0g</td></tr>
+          <tr><td>Proteína</td><td class="value">20g</td></tr>
+          <tr><td>Grasas</td><td class="value">22g</td></tr>
+        </table>
+      </section>
+    </main>
+
+    <style>
+      @font-face {
+        font-family: 'Young Serif';
+        src: url('/assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
+      }
+      @font-face {
+        font-family: 'Outfit';
+        src: url('/assets/fonts/outfit/static/Outfit-Regular.ttf') format('truetype');
+      }
+
+      body {
+        background-color: hsl(30, 54%, 90%);
+        font-family: 'Outfit', sans-serif;
+        display: flex;
+        justify-content: center;
+        padding: 40px 20px;
+        margin: 0;
+        color: #1a1a1a;
+      }
+
+      main {
+        background-color: white;
+        max-width: 736px;
+        padding: 40px;
+        border-radius: 24px;
+      }
+
+      img {
+        width: 100%;
+        border-radius: 12px;
+        margin-bottom: 32px;
+      }
+
+      h1 {
+        font-family: 'Young Serif', serif;
+        color: #1a1a1a;
+        font-size: 2.5rem;
+        margin-top: 0;
+      }
+
+      h2 {
+        font-family: 'Young Serif', serif;
+        color: hsl(14, 45%, 36%);
+        margin-top: 0;
+      }
+
+      .description {
+        color: #222;
+        line-height: 1.6;
+      }
+
+      .prep-time {
+        background-color: hsl(330, 100%, 98%);
+        padding: 24px;
+        border-radius: 12px;
+        margin: 32px 0;
+      }
+
+      .prep-time h3 {
+        color: hsl(332, 51%, 32%);
+        margin-top: 0;
+      }
+
+      ul, ol {
+        color: #222;
+        padding-left: 24px;
+      }
+
+      li {
+        margin-bottom: 12px;
+        padding-left: 8px;
+        line-height: 1.6;
+      }
+
+      li::marker {
+        color: hsl(14, 45%, 36%);
+        font-weight: bold;
+      }
+
+      .prep-time li::marker {
+        color: hsl(332, 51%, 32%);
+      }
+
+      hr {
+        border: 0;
+        border-top: 1px solid hsl(30, 18%, 87%);
+        margin: 32px 0;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      tr {
+        border-bottom: 1px solid hsl(30, 18%, 87%);
+      }
+
+      tr:last-child {
+        border-bottom: none;
+      }
+
+      td {
+        padding: 12px 24px;
+        color: #222;
+      }
+
+      .value {
+        color: hsl(14, 45%, 36%);
+        font-weight: bold;
+      }
+
+      @media (max-width: 600px) {
+        body { padding: 0; }
+        main { border-radius: 0; padding: 0 0 40px 0; }
+        main > *:not(img) { padding-left: 32px; padding-right: 32px; }
+        img { border-radius: 0; }
+      }
+    </style>
+  </body>
 </html>
