@@ -6,19 +6,19 @@
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
-    <title>Receta de Omelette</title>
+    <title>Receta de Omelette Simple</title>
   </head>
   <body>
     <main>
-      <img src="/assets/images/image-omelette.jpeg" alt="Omelette" />
+      <img src="/assets/images/image-omelette.jpeg" alt="Omelette recién preparado en un plato" />
 
-      <h1>Receta de Omelette</h1>
+      <h1>Receta de Omelette Simple</h1>
       <p class="description">
         Un plato fácil y rápido, perfecto para cualquier comida. Este omelette clásico combina huevos batidos cocinados a la perfección, opcionalmente rellenos con tu elección de queso, vegetales o carnes.
       </p>
 
       <section class="prep-time">
-        <h3>Tiempo de preparación</h3>
+        <h2>Tiempo de preparación</h2>
         <ul>
           <li><strong>Total:</strong> Aproximadamente 10 minutos</li>
           <li><strong>Preparación:</strong> 5 minutos</li>
@@ -57,10 +57,22 @@
         <h2>Nutrición</h2>
         <p>Valores nutricionales por porción (sin rellenos adicionales).</p>
         <table>
-          <tr><td>Calorías</td><td class="value">277kcal</td></tr>
-          <tr><td>Carbohidratos</td><td class="value">0g</td></tr>
-          <tr><td>Proteína</td><td class="value">20g</td></tr>
-          <tr><td>Grasas</td><td class="value">22g</td></tr>
+          <tr>
+            <th scope="row">Calorías</th>
+            <td class="value">277kcal</td>
+          </tr>
+          <tr>
+            <th scope="row">Carbohidratos</th>
+            <td class="value">0g</td>
+          </tr>
+          <tr>
+            <th scope="row">Proteína</th>
+            <td class="value">20g</td>
+          </tr>
+          <tr>
+            <th scope="row">Grasas</th>
+            <td class="value">22g</td>
+          </tr>
         </table>
       </section>
     </main>
@@ -123,9 +135,12 @@
         margin: 32px 0;
       }
 
-      .prep-time h3 {
+      .prep-time h2 {
+        font-family: 'Outfit', sans-serif;
+        font-size: 1.25rem;
         color: hsl(332, 51%, 32%);
         margin-top: 0;
+        margin-bottom: 12px;
       }
 
       ul, ol {
@@ -157,6 +172,7 @@
       table {
         width: 100%;
         border-collapse: collapse;
+        margin-top: 16px;
       }
 
       tr {
@@ -165,6 +181,13 @@
 
       tr:last-child {
         border-bottom: none;
+      }
+
+      th {
+        text-align: left;
+        font-weight: normal;
+        padding: 12px 24px;
+        color: #222;
       }
 
       td {
